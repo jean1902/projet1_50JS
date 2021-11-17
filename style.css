@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.box{
+   width: 100px;
+   min-height: 100px;
+   background-color: rosybrown;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50% ,-50%);
+}
+.cont-ligne{
+    width: 80px;
+    height: 35px;
+    margin: 50px auto;
+    position: relative;
+}
+.ligne{
+    width: 100%;
+    background-color: black;
+    height: 7px;
+    border-radius: 5px;
+    position: absolute;
+    transition:  all 0.5s ease-in-out;
+}
+.box1{
+    top: 0px;
+}
+.box2{
+    top: 18px;
+}
+.box3{
+    top: 36px;
+}
+.btn1.active .ligne:nth-child(1){
+     top:18px;
+     transform: rotate(135deg);
+}
+.btn1.active .ligne:nth-child(2){
+   opacity: 0;
+  transform: translateX(-20px);
+}
+.btn1.active .ligne:nth-child(3){
+    top:18px;
+    transform: rotate(-135deg);
+}
+
