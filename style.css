@@ -1,50 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.box{
-   width: 100px;
-   min-height: 100px;
-   background-color: rosybrown;
-   position: absolute;
-   left: 50%;
-   top: 50%;
-   transform: translate(-50% ,-50%);
+body{
+    font-family: 'Muli',sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
 }
-.cont-ligne{
-    width: 80px;
-    height: 35px;
-    margin: 50px auto;
+.pannel1{
+    background-image: url(./image/leandra-rieger-iMK_1babVUg-unsplash.jpg);
+    background-size: cover;
+
+}
+.pannel2{
+    background-image: url(./image/lucas-wesney-s-y2HJElONo-unsplash.jpg);
+}
+.pannel3{
+    background-image: url(./image/lux-productions-MJI8SK_X4w8-unsplash.jpg);
+}
+.pannel4{
+    background-image: url(./image/vitaliy-gavrushchenko-fJQSCxB18wE-unsplash.jpg);
+}
+.pannel5{
+    background-image: url(./image/chua-bing-quan-Sg7eWHKrxrA-unsplash.jpg);
+}
+.container {
+    display: flex;
+    width: 90vw;
+}
+.panel {
+    background-size:  auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
     position: relative;
+    transition: flex 0.7s ease-in;
 }
-.ligne{
-    width: 100%;
-    background-color: black;
-    height: 7px;
-    border-radius: 5px;
+.panel h3{
+    font-size: 24px;
     position: absolute;
-    transition:  all 0.5s ease-in-out;
-}
-.box1{
-    top: 0px;
-}
-.box2{
-    top: 18px;
-}
-.box3{
-    top: 36px;
-}
-.btn1.active .ligne:nth-child(1){
-     top:18px;
-     transform: rotate(135deg);
-}
-.btn1.active .ligne:nth-child(2){
-   opacity: 0;
-  transform: translateX(-20px);
-}
-.btn1.active .ligne:nth-child(3){
-    top:18px;
-    transform: rotate(-135deg);
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 1;
 }
 
+.panel.active{
+    flex:5;
+}
+
+@media screen and (max-width:480px){
+    .container{
+        width: 100vw;
+    }
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5){
+        display: none;
+    }
+}

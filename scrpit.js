@@ -1,5 +1,7 @@
-const btn = document.querySelector('.btn1');
-btn.addEventListener('click',presentation);
-function presentation(){
-    btn.classList.toggle('active');
-}
+const panels = document.querySelectorAll('.panel');
+
+panels.forEach( panel =>{
+    panel.addEventListener('click',()=>{
+        panel.classList.toggle('active');
+    })
+})
